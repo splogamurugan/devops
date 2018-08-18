@@ -1,0 +1,202 @@
+    1  ls
+    2  clear
+    3  ls
+    4  shutdown -h
+    5  shutdown -now
+    6  shutdown -n
+    7  shutdown
+    8  yum install openssh-server openssh-clients openssl-libs
+    9  yum install openssh-server 
+   10  curl google.com
+   11  ls
+   12  yum
+   13  yum install vim
+   14  /etc/init.d/network restart
+   15  ifconfig
+   16  ipconfig
+   17  ip
+   18  ip address show
+   19  /etc/init.d/network restart
+   20  ip address show
+   21  ls /media/
+   22  ls /mnt/
+   23  ls
+   24  ls /mnt/
+   25  ls /media/
+   26  clear
+   27  ls
+   28  ip address
+   29  ip address shoq
+   30  ip address show
+   31  curl www.google.com
+   32  ls
+   33  clear
+   34  ls
+   35  sudo yum remove docker                   docker-client                   docker-client-latest                   docker-common                   docker-latest                   docker-latest-logrotate                   docker-logrotate                   docker-selinux                   docker-engine-selinux                   docker-engine
+   36  sudo yum install -y yum-utils   device-mapper-persistent-data   lvm2
+   37  sudo yum-config-manager     --add-repo     https://download.docker.com/linux/centos/docker-ce.repo
+   38  sudo yum install docker-ce
+   39  sestatus
+   40  setenforce 0
+   41  vi /etc/sysconfig/selinux
+   42  sestatus
+   43  setenforce Permissive
+   44  sestatus
+   45  echo 0 > /selinux/enforce
+   46  setenforce Permissive
+   47  sestatus
+   48  sudo yum install epel-release
+   49  sudo yum install ansible
+   50  clear
+   51  docker ls
+   52  docker ps
+   53  sudo yum-config-manager --enable docker-ce-edge
+   54  sudo yum-config-manager --enable docker-ce-test
+   55  sudo systemctl start docker
+   56  docker ps
+   57  docker images
+   58  celar
+   59  clear
+   60  ls
+   61  sudo docker run hello-world
+   62  docker images
+   63  clear
+   64  ls
+   65  clear
+   66  ls
+   67  ansible -m ping all
+   68  ansible -m ping localhost
+   69  clear
+   70  ls
+   71  sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+   72  yum insall wget
+   73  yum intsall wget
+   74  yum install wget
+   75  sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+   76  sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+   77  sudo yum install jenkins
+   78  sudo service jenkins start
+   79  sudo yum install java
+   80  sudo service jenkins start
+   81  vim /var/lib/jenkins/secrets/initialAdminPassword
+   82  yum install nfs-utils
+   83  /root/
+   84  ls /root/
+   85  ls
+   86  cd /
+   87  ls
+   88  cd /root/
+   89  ls
+   90  systemctl enable rpcbind
+   91  systemctl enable nfs-server
+   92  systemctl enable nfs-lock
+   93  systemctl enable nfs-idmap
+   94  systemctl start rpcbind
+   95  systemctl start nfs-server
+   96  systemctl start nfs-lock
+   97  systemctl start nfs-idmap
+   98  nano /etc/exports
+   99  vim /etc/exports
+  100  systemctl restart nfs-server
+  101  firewall-cmd --permanent --zone=public --add-service=nfs
+  102  firewall-cmd --permanent --zone=public --add-service=mountd
+  103  firewall-cmd --permanent --zone=public --add-service=rpc-bind
+  104  firewall-cmd --reload
+  105  chown nfsnobody:nfsnobody /root
+  106  systemctl restart nfs-server
+  107  nfs-server status
+  108* 
+  109  systemctl restart nfs-servd
+  110  vim /etc/exports
+  111  systemctl restart nfs-server
+  112* vim expo
+  113  vim /etc/exports
+  114  systemctl restart nfs-server
+  115  mkdir devOPS
+  116  cd devOPS/
+  117  ls
+  118  mkdir images
+  119  cd images/
+  120  vim Dockerfile
+  121  docker build -t alpine/php .
+  122  vim Dockerfile
+  123  docker build -t alpine/php .
+  124  vim Dockerfile
+  125  docker build -t alpine/php .
+  126  vim Dockerfile
+  127  docker build -t alpine/php .
+  128  docker images
+  129  docker run -p 2001:22 --name webserver1 --host webserver1 -p 8001:80 alpine/php
+  130  docker run  --name webserver1 --hostname webserver1 -p 2001:22 -p 8001:80 alpine/php
+  131  docker ps
+  132  sshkeygen
+  133  ssh-keygen
+  134  ls
+  135  cp /root/.ssh/id_rsa.pub authorized_keys
+  136  vim Dockerfile
+  137  docker build -t alpine/php .
+  138  docker run  --name webserver1 --hostname webserver1 -p 2001:22 -p 8001:80 alpine/php
+  139  docker ps -a
+  140  docker rm $(docker ps -q)
+  141  docker rm $(docker ps -aq)
+  142  docker run  --name webserver1 --hostname webserver1 -p 2001:22 -p 8001:80 alpine/php
+  143  vim Dockerfile
+  144  docker build -t alpine/php .
+  145  docker rm $(docker ps -aq)
+  146  docker run  --name webserver1 --hostname webserver1 -p 2001:22 -p 8001:80 alpine/php
+  147  vim Dockerfile
+  148  docker build -t alpine/php .
+  149  docker rm $(docker ps -aq)
+  150  docker run  --name webserver1 --hostname webserver1 -p 2001:22 -p 8001:80 alpine/php
+  151  ls
+  152  docker start webserver1
+  153  ssh -p 2003 root@localhost
+  154  ssh -p 2001 root@localhost
+  155  clear
+  156  ls
+  157  clear
+  158  ls
+  159  cd ..
+  160  ls
+  161  docker build -t alpine/php -f images/Dockerfile 
+  162* docker build -t alpine/php -f 
+  163  docker build -t alpine/php -f images/Dockerfile ./images/
+  164  docker images
+  165  vim hosts
+  166  ansible -i hosts ping all
+  167  ansible -i hosts -m ping 
+  168  ansible -i hosts -m ping all
+  169  vim hosts
+  170  ansible -i hosts -m ping all
+  171  vim hosts
+  172  ansible -i hosts -m ping all
+  173  ansible -i ./hosts -m ping all
+  174  vim hosts
+  175  ansible -i ./hosts -m ping all
+  176  ls
+  177  ansible -m ping all
+  178  ansible -i hosts -m ping all
+  179  docker ps
+  180  ansible -i hosts -m ping all
+  181  vim hosts
+  182  ansible -i hosts -m ping all
+  183  vim hosts
+  184  ansible -i hosts -m ping all
+  185  ansible rm -f $(docker ps -qa)
+  186  docker rm -f $(docker ps -qa)
+  187  history 
+  188  docker run -d  --name webserver1 --hostname webserver1 -p 2001:22 -p 8001:80 alpine/php
+  189  docker ps
+  190  ansible rm -f $(docker ps -qa)
+  191  ansible -i hosts -m ping all
+  192  ls
+  193  echo "# devops" >> README.md
+  194  git init
+  195  yum install git
+  196  git init
+  197  git commit -m "first commit"
+  198  git remote add origin git@github.com:splogamurugan/devops.git
+  199  git push -u origin master
+  200  git status
+  201  git add .
+  202  history > commands1
