@@ -1,0 +1,11 @@
+- name: This will install PHP in the container
+  hosts: all
+  tasks:
+    - name: Install PHP7
+      apk: name=php7 update_cache=yes state=latest
+    - name: Install php7-fpm
+      apk: name=php7-fpm state=latest
+    - name: Install php7-opcache
+      apk: name=php7-opcache update_cache=yes
+    - name: start PHP 
+      shell: "php-fpm7"

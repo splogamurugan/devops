@@ -1,0 +1,811 @@
+    1  ls
+    2  clear
+    3  ls
+    4  shutdown -h
+    5  shutdown -now
+    6  shutdown -n
+    7  shutdown
+    8  yum install openssh-server openssh-clients openssl-libs
+    9  yum install openssh-server 
+   10  curl google.com
+   11  ls
+   12  yum
+   13  yum install vim
+   14  /etc/init.d/network restart
+   15  ifconfig
+   16  ipconfig
+   17  ip
+   18  ip address show
+   19  /etc/init.d/network restart
+   20  ip address show
+   21  ls /media/
+   22  ls /mnt/
+   23  ls
+   24  ls /mnt/
+   25  ls /media/
+   26  clear
+   27  ls
+   28  ip address
+   29  ip address shoq
+   30  ip address show
+   31  curl www.google.com
+   32  ls
+   33  docker ps
+   34  docker stop 450de604e2fd
+   35  ls
+   36  clear
+   37  ls
+   38  sudo yum remove docker                   docker-client                   docker-client-latest                   docker-common                   docker-latest                   docker-latest-logrotate                   docker-logrotate                   docker-selinux                   docker-engine-selinux                   docker-engine
+   39  sudo yum install -y yum-utils   device-mapper-persistent-data   lvm2
+   40  sudo yum-config-manager     --add-repo     https://download.docker.com/linux/centos/docker-ce.repo
+   41  sudo yum install docker-ce
+   42  sestatus
+   43  setenforce 0
+   44  vi /etc/sysconfig/selinux
+   45  sestatus
+   46  setenforce Permissive
+   47  sestatus
+   48  echo 0 > /selinux/enforce
+   49  setenforce Permissive
+   50  sestatus
+   51  sudo yum install epel-release
+   52  sudo yum install ansible
+   53  clear
+   54  docker ls
+   55  docker ps
+   56  sudo yum-config-manager --enable docker-ce-edge
+   57  sudo yum-config-manager --enable docker-ce-test
+   58  sudo systemctl start docker
+   59  docker ps
+   60  docker images
+   61  celar
+   62  clear
+   63  ls
+   64  sudo docker run hello-world
+   65  docker images
+   66  clear
+   67  ls
+   68  clear
+   69  ls
+   70  ansible -m ping all
+   71  ansible -m ping localhost
+   72  clear
+   73  ls
+   74  sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+   75  yum insall wget
+   76  yum intsall wget
+   77  yum install wget
+   78  sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+   79  sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+   80  sudo yum install jenkins
+   81  sudo service jenkins start
+   82  sudo yum install java
+   83  sudo service jenkins start
+   84  vim /var/lib/jenkins/secrets/initialAdminPassword
+   85  yum install nfs-utils
+   86  /root/
+   87  ls /root/
+   88  ls
+   89  cd /
+   90  ls
+   91  cd /root/
+   92  ls
+   93  systemctl enable rpcbind
+   94  systemctl enable nfs-server
+   95  systemctl enable nfs-lock
+   96  systemctl enable nfs-idmap
+   97  systemctl start rpcbind
+   98  systemctl start nfs-server
+   99  systemctl start nfs-lock
+  100  systemctl start nfs-idmap
+  101  nano /etc/exports
+  102  vim /etc/exports
+  103  systemctl restart nfs-server
+  104  firewall-cmd --permanent --zone=public --add-service=nfs
+  105  firewall-cmd --permanent --zone=public --add-service=mountd
+  106  firewall-cmd --permanent --zone=public --add-service=rpc-bind
+  107  firewall-cmd --reload
+  108  chown nfsnobody:nfsnobody /root
+  109  systemctl restart nfs-server
+  110  nfs-server status
+  111  systemctl restart nfs-servd
+  112  vim /etc/exports
+  113  systemctl restart nfs-server
+  114  vim expo
+  115  vim /etc/exports
+  116  systemctl restart nfs-server
+  117  mkdir devOPS
+  118  cd devOPS/
+  119  ls
+  120  mkdir images
+  121  cd images/
+  122  vim Dockerfile
+  123  docker build -t alpine/php .
+  124  vim Dockerfile
+  125  docker build -t alpine/php .
+  126  vim Dockerfile
+  127  docker build -t alpine/php .
+  128  vim Dockerfile
+  129  docker build -t alpine/php .
+  130  docker images
+  131  docker run -p 2001:22 --name webserver1 --host webserver1 -p 8001:80 alpine/php
+  132  docker run  --name webserver1 --hostname webserver1 -p 2001:22 -p 8001:80 alpine/php
+  133  docker ps
+  134  sshkeygen
+  135  ssh-keygen
+  136  ls
+  137  cp /root/.ssh/id_rsa.pub authorized_keys
+  138  vim Dockerfile
+  139  docker build -t alpine/php .
+  140  docker run  --name webserver1 --hostname webserver1 -p 2001:22 -p 8001:80 alpine/php
+  141  docker ps -a
+  142  docker rm $(docker ps -q)
+  143  docker rm $(docker ps -aq)
+  144  docker run  --name webserver1 --hostname webserver1 -p 2001:22 -p 8001:80 alpine/php
+  145  vim Dockerfile
+  146  docker build -t alpine/php .
+  147  docker rm $(docker ps -aq)
+  148  docker run  --name webserver1 --hostname webserver1 -p 2001:22 -p 8001:80 alpine/php
+  149  vim Dockerfile
+  150  docker build -t alpine/php .
+  151  docker rm $(docker ps -aq)
+  152  docker run  --name webserver1 --hostname webserver1 -p 2001:22 -p 8001:80 alpine/php
+  153  ls
+  154  docker start webserver1
+  155  ssh -p 2003 root@localhost
+  156  ssh -p 2001 root@localhost
+  157  clear
+  158  ls
+  159  clear
+  160  ls
+  161  cd ..
+  162  ls
+  163  docker build -t alpine/php -f images/Dockerfile 
+  164  docker build -t alpine/php -f 
+  165  docker build -t alpine/php -f images/Dockerfile ./images/
+  166  docker images
+  167  vim hosts
+  168  ansible -i hosts ping all
+  169  ansible -i hosts -m ping 
+  170  ansible -i hosts -m ping all
+  171  vim hosts
+  172  ansible -i hosts -m ping all
+  173  vim hosts
+  174  ansible -i hosts -m ping all
+  175  ansible -i ./hosts -m ping all
+  176  vim hosts
+  177  ansible -i ./hosts -m ping all
+  178  ls
+  179  ansible -m ping all
+  180  ansible -i hosts -m ping all
+  181  docker ps
+  182  ansible -i hosts -m ping all
+  183  vim hosts
+  184  ansible -i hosts -m ping all
+  185  vim hosts
+  186  ansible -i hosts -m ping all
+  187  ansible rm -f $(docker ps -qa)
+  188  docker rm -f $(docker ps -qa)
+  189  history 
+  190  docker run -d  --name webserver1 --hostname webserver1 -p 2001:22 -p 8001:80 alpine/php
+  191  docker ps
+  192  ansible rm -f $(docker ps -qa)
+  193  ansible -i hosts -m ping all
+  194  ls
+  195  echo "# devops" >> README.md
+  196  git init
+  197  yum install git
+  198  git init
+  199  git commit -m "first commit"
+  200  git remote add origin git@github.com:splogamurugan/devops.git
+  201  git push -u origin master
+  202  git status
+  203  git add .
+  204  history > commands1
+  205  git add .
+  206  git commit -m "first commit"
+  207  git push -u origin master
+  208  git commit -m "first commit"
+  209  git push -u origin master
+  210  git config --global user.name "splogamurugan"
+  211  git config --global user.email "splogamurugan@gmail.com"
+  212  clear
+  213  ls
+  214  git push -u origin master
+  215  git remote add origin git@github.com:splogamurugan/devops.git
+  216  git push -u origin master
+  217  git init
+  218  git status
+  219  git pull 
+  220  vim /root/.ssh/id_rsa.pub 
+  221  git pull 
+  222  git push -u origin master
+  223  git push -f origin master
+  224  ansible -i hosts -m ping all
+  225  ls
+  226  mkdir playbooks
+  227  cd playbooks/
+  228  vim installphp.yml
+  229  cd ..
+  230  ansible-playbook playbooks/installphp.yml all
+  231  ansible-playbook -i hosts playbooks/installphp.yml all
+  232  ls
+  233  ansible-playbook -i hosts playbooks/installphp.yml
+  234  vim playbooks/installphp.yml 
+  235  ansible-playbook -i hosts playbooks/installphp.yml
+  236  vim playbooks/installphp.yml 
+  237  ansible-playbook -i hosts playbooks/installphp.yml
+  238  ssh -p 2001 root@localhost
+  239  vim playbooks/installphp-modules.yml 
+  240  ansible-playbook -i hosts playbooks/installphp-modules.yml
+  241  vim playbooks/installphp-modules.yml 
+  242  ansible-playbook -i hosts playbooks/installphp-modules.yml
+  243  vim playbooks/installphp-modules.yml 
+  244  ansible-playbook -i hosts playbooks/installphp-modules.yml
+  245  vim playbooks/installphp-modules.yml 
+  246  ansible-playbook -i hosts playbooks/installphp-modules.yml
+  247  ls
+  248  cd playbooks/
+  249  ls
+  250  mkdir hosts
+  251  rm hosts
+  252  rm -rf hosts
+  253  vim hosts
+  254  vim ansible.cfg
+  255  vim installnginx.yml
+  256  ls
+  257  vim index.html.j2
+  258  vim defaults
+  259  s
+  260  ls
+  261  vim vars
+  262  ls
+  263  vim ansible.cfg 
+  264  vim defaults 
+  265  ls
+  266  mkdir group_vars
+  267  vim group_vars/all
+  268  mkdir host_vars
+  269  vim host_vars/webserver1
+  270  ls
+  271  ansible-playbook installnginx.yml 
+  272  ls
+  273  mv vars myvariables
+  274  ansible-playbook installnginx.yml 
+  275  vim installnginx.
+  276  vim installnginx.yml 
+  277  ansible-playbook installnginx.yml 
+  278  docker run webserver1 bash
+  279  docker exec  webserver1 bash
+  280  docker exec  webserver1 sh
+  281  docker exec -it  webserver1 sh
+  282  ls
+  283  mv defaults default
+  284  ansible-playbook installnginx.yml 
+  285  ssh -p 2003 root@webserver1
+  286  ssh -p 2003 root@localhost
+  287  ssh -p 2001 root@localhost
+  288  vim installnginx.yml 
+  289  clear
+  290  ls
+  291  history | grep syscntl 
+  292  history | grep systemctl
+  293  docker
+  294  docker ps
+  295  sudo systemctl enable docker
+  296  sudo chkconfig docker on
+  297  docker ps
+  298  systemctl start docker
+  299  docker ps
+  300  docker start webserver1
+  301  clear
+  302  ls
+  303  docker ps
+  304  cd devOPS/
+  305  ls
+  306  cd playbooks/
+  307  ls
+  308  ansible-playbook installnginx.yml 
+  309  ls
+  310  vim default 
+  311  vim installnginx.yml 
+  312  vim default.conf
+  313  rm default
+  314  vim installnginx.yml 
+  315  ansible-playbook installnginx.yml 
+  316  vim installnginx.yml 
+  317  docker exec -it webserver bash
+  318  docker exec -it webserver sh
+  319  docker exec -it webserver1 sh
+  320  docker s
+  321  docker ps
+  322  docker inspect webserver1
+  323  curl http://172.17.0.2:80
+  324  docker stop webserver1
+  325  docker start webserver1
+  326  clear
+  327  ls
+  328  vim installnginx.yml 
+  329  ansible-playbook installnginx.yml 
+  330  curl http://172.17.0.2:80
+  331  docker exec -it webserver1 sh
+  332  curl http://172.17.0.2:80
+  333  clear
+  334  ls
+  335  clear
+  336  ls
+  337  ansible-playbook installnginx.yml 
+  338  vim installnginx-apk.yml
+  339  ansible-playbok installnginx-apk.yml 
+  340  ansible-playbook installnginx-apk.yml 
+  341  vim installnginx-apk.yml
+  342  ansible-playbook installnginx-apk.yml 
+  343  vim installnginx.yml 
+  344  vim installnginx-apk.yml 
+  345  ansible-playbook installnginx-apk.yml 
+  346  docker exec -it webserver1 sh
+  347  curl http://172.17.0.2:80
+  348  docker inspect webserver1
+  349  curl http://172.17.0.2:80
+  350  curl http://172.17.0.2
+  351  curl http://172.17.0.2/
+  352  docker exec -it webserver1 sh
+  353  ls
+  354  docker exec -it webserver1 sh
+  355  docker stop websesrver1
+  356  docker stop webserver1
+  357  docker start webserver1
+  358  docker exec -it webserver1 sh
+  359  curl http://172.17.0.2/
+  360  vim nginx.conf
+  361  vim server {
+  362  vim nginx.conf
+  363  vim default.conf 
+  364  docker cp nginx.conf webserver:/etc/nginx/nginx.conf
+  365  docker cp nginx.conf webserver1:/etc/nginx/nginx.conf
+  366  docker cp default.conf webserver1:/etc/nginx/conf.d/default.conf
+  367  docker exec -it webserver1 sh
+  368  curl http://172.17.0.2/
+  369  docker cp index.html.j2 webserver1:/usr/share/nginx/html
+  370  docker cp index.html.j2 webserver1:/usr/share/nginx/html/
+  371  docker exec -it webserver1 sh
+  372  curl http://172.17.0.2/
+  373  docker exec -it webserver1 sh
+  374  curl http://172.17.0.2/
+  375  ls
+  376  vim index.html.j2 
+  377  docker exec -it webserver1 sh
+  378  clear
+  379  curl http://172.17.0.2/
+  380  docker exec -it webserver1 sh
+  381  curl http://172.17.0.2/
+  382  docker exec  webserver1 nginx
+  383  curl http://172.17.0.2/
+  384  docker stop webserver1
+  385  vim installnginx-apk.
+  386  vim installnginx-apk.yml 
+  387  ansible-playbook installnginx-apk.yml 
+  388  vim installnginx-apk.yml 
+  389  ansible-playbook installnginx-apk.yml 
+  390  vim installnginx-apk.yml 
+  391  ansible-playbook installnginx-apk.yml 
+  392  vim installnginx-apk.yml 
+  393  ansible-playbook installnginx-apk.yml 
+  394  docker ps
+  395  docker start webserver1
+  396  ansible-playbook installnginx-apk.yml 
+  397  vim installnginx-apk.yml 
+  398  ansible-playbook installnginx-apk.yml 
+  399  ansible-playbook -v installnginx-apk.yml 
+  400  ansible-playbook -vvvv installnginx-apk.yml 
+  401  vim installnginx-apk.yml 
+  402  ansible-playbook -vvvv installnginx-apk.yml 
+  403  vim installnginx-apk.yml 
+  404  ansible-playbook -vvvv installnginx-apk.yml 
+  405  vim installnginx-apk.yml 
+  406  ansible-playbook installnginx-apk.yml 
+  407  curl http://172.17.0.2/
+  408  vim installnginx-apk.yml 
+  409  ansible-playbook installnginx-apk.yml 
+  410  curl http://172.17.0.2/
+  411  docker stop webserver1
+  412  ansible-playbook installnginx-apk.yml 
+  413  docker start webserver1
+  414  ansible-playbook installnginx-apk.yml 
+  415  curl http://172.17.0.2/
+  416  docker rm -f $(docker ps -aq)
+  417  history | grep docker
+  418  docker run  --name webserver1 -d --hostname webserver1 -p 2001:22 -p 8001:80 alpine/php
+  419  ansible-playbook installnginx-apk.yml 
+  420  vim installnginx-apk.yml 
+  421  ansible-playbook installnginx-apk.yml 
+  422  vim installnginx-apk.yml 
+  423  ansible-playbook installnginx-apk.yml 
+  424  vim installnginx-apk.yml 
+  425  ansible-playbook installnginx-apk.yml 
+  426  vim installnginx-apk.yml 
+  427  curl http://172.17.0.2/
+  428  vim installnginx-apk.yml 
+  429  ansible-playbook installnginx-apk.yml 
+  430  vim installnginx-apk.yml 
+  431  ansible-playbook installnginx-apk.yml 
+  432  vim installnginx-apk.yml 
+  433  ansible-playbook installnginx-apk.yml 
+  434  curl http://172.17.0.2/
+  435  vim installnginx-apk.yml 
+  436  ansible-playbook installnginx-apk.yml 
+  437  docker exec -it webserver1 sh
+  438  curl http://172.17.0.2/
+  439  ansible-playbook installnginx-apk.yml 
+  440  curl http://172.17.0.2/
+  441  docker stop webserver1
+  442  docker start webserver1
+  443  ansible-playbook installnginx-apk.yml 
+  444  curl http://172.17.0.2/
+  445  vim installnginx-apk.yml 
+  446  ansible-playbook installnginx-apk.yml 
+  447  vim installnginx-apk.yml 
+  448  curl http://172.17.0.2/
+  449  clear
+  450  ls
+  451  rm -rf installnginx.yml 
+  452  tree
+  453  yum install tree
+  454  tree
+  455  rm -rf *.retry
+  456  tree
+  457  ansible-playbook installphp.yml 
+  458  vim webserver:/usr/share/nginx/html/index.php
+  459  vim index.php 
+  460  docker cp index.php webserver:/usr/share/nginx/html/index.php
+  461  docker cp index.php webserver1:/usr/share/nginx/html/index.php
+  462  curl http://172.17.0.2/index.php
+  463  docker exec -it webserver1 bash
+  464  docker exec -it webserver1 sh
+  465  curl http://172.17.0.2/index.php
+  466  vim nginx.conf 
+  467  vim default.conf 
+  468  ansible-playbook installnginx-apk.yml 
+  469  curl http://172.17.0.2/index.php
+  470  vim installnginx-apk.yml 
+  471  ansible-playbook installnginx-apk.yml 
+  472  curl http://172.17.0.2/index.php
+  473  vim default.conf 
+  474  vim installphp.yml 
+  475  ansible-playbook installphp.yml 
+  476  vim installphp.yml 
+  477  ansible-playbook installphp.yml 
+  478  docker exec -it webserver1 sh
+  479  ip show all
+  480  /etc/init.d/network restart
+  481  systemctl status network.service
+  482  sudo /etc/init.d/network restart
+  483  journalctl -xe
+  484  vim 
+  485  vim /etc/sysconfig/network-scripts/ifcfg-eth0
+  486  /etc/init.d/network restart
+  487  systemctl stop NetworkManageer
+  488  systemctl stop NetworkManager
+  489  systemctl disable NetworkManager
+  490  /etc/init.d/network restart
+  491  /etc/init.d/network stop
+  492  /etc/init.d/network start
+  493  /etc/init.d/network stop
+  494  ip addr flush dev eth0
+  495  ip addr flush
+  496  ip addr flushdev
+  497  ip addr flush dev 
+  498  rm /etc/sysconfig/network-scripts/ifcfg-eth0
+  499  /etc/init.d/network start
+  500  vim /etc/sysconfig/network-scripts/ifcfg-eth0
+  501  addr
+  502  ip
+  503  ip addr
+  504  ip addr show
+  505  vim /etc/sysconfig/network-scripts/ifcfg-eth1
+  506  vim /etc/sysconfig/network-scripts/ifcfg-eth0
+  507  mount /dev/cdrom /mnt
+  508  cd /mnt/
+  509  ./VBoxLinuxAdditions.run 
+  510  yum install bzip2
+  511  ./VBoxLinuxAdditions.run 
+  512  bzip2
+  513  yum install bzip2
+  514  /etc/init.d/network restart
+  515  yum install bzip2
+  516  /etc/init.d/network restart
+  517  curl www.google.com
+  518  /etc/init.d/network restart
+  519  curl www.google.com
+  520  vim /etc/sysconfig/network-scripts/ifcfg-eth0
+  521  /etc/init.d/network restart
+  522  vim /etc/sysconfig/network-scripts/ifcfg-eth0
+  523  /etc/init.d/network restart
+  524  rm /etc/sysconfig/network-scripts/ifcfg-eth0
+  525  /etc/init.d/network restart
+  526  curl www.google.com
+  527  /etc/init.d/network restart
+  528  curl www.google.com
+  529  /etc/init.d/network restart
+  530  curl www.google.com
+  531  ls
+  532  vim /etc/sysconfig/network-scripts/ifcfg-enp0s3 
+  533  /etc/init.d/network restart
+  534  curl www.google.com
+  535  clear
+  536  ls
+  537  ip addr show
+  538  yum install bzip2
+  539  mount /dev/cdrom /mnt
+  540  cd /mnt
+  541  ./VBoxLinuxAdditions.run 
+  542  clear
+  543  ls
+  544  docker ps
+  545  ip addr show
+  546  clear
+  547  ls
+  548  cd devOPS/
+  549  ls
+  550  cd playbooks/
+  551  ls
+  552  docker start webserver1
+  553  docker ps
+  554  docker exec -it webserver1 sh
+  555  ansible-playbook installnginx-apk.yml 
+  556  vim installnginx-apk.yml 
+  557  docker exec -it webserver1 sh
+  558  vim installnginx-apk.yml 
+  559  ansible-playbook installnginx-apk.yml 
+  560  vim installphp-modules.yml 
+  561  vim installphp.yml 
+  562  ansible-playbook installphp.yml 
+  563  vim installphp.yml 
+  564  ansible-playbook installphp.yml 
+  565  docker ps
+  566  vim installphp.yml 
+  567  docker rm -f webserver1
+  568  docker run  --name webserver1 -d --hostname webserver1 -p 2001:22 -p 8001:80 alpine/php
+  569  ansible-playbook installphp.yml 
+  570  ansible-playbook installphp-modules.yml 
+  571  ansible-playbook installnginx-apk.yml 
+  572  vim  installnginx-apk.yml 
+  573  ansible-playbook installnginx-apk.yml 
+  574  history | grep curl
+  575  curl http://172.17.0.2/index.php
+  576  curl http://172.17.0.2/
+  577  docker inspect webserver1
+  578  vim  installnginx-apk.yml 
+  579  ansible-playbook installnginx-apk.yml 
+  580  vim nginx.conf 
+  581  docker exec -it webserver1 sh
+  582  vim default.conf 
+  583  curl http://172.17.0.2:9000
+  584  docker exec -it webserver1 sh
+  585  curl http://172.17.0.2:9000
+  586  curl http://172.17.0.2
+  587  docker rm -f webserver1
+  588  docker run  --name webserver1 -d --hostname webserver1 -p 2001:22 -p 8001:80 alpine/php
+  589  vim default.conf 
+  590  vim nginx.conf 
+  591  ansible-playbook installnginx-apk.yml 
+  592  vim nginx.conf 
+  593  ls
+  594  ansible-playbook installnginx-apk.yml 
+  595  vim nginx.conf 
+  596  ansible-playbook installnginx-apk.yml 
+  597  vim installnginx-apk.yml 
+  598  ansible-playbook installnginx-apk.yml 
+  599  curl http://172.17.0.2
+  600  ls
+  601  history | grep docker cp
+  602  clear
+  603  ls
+  604  cd devOPS/
+  605  ls
+  606  cd playbooks/
+  607  ls
+  608  docker start webserver1
+  609  docker ps
+  610  docker exec -it webserver1 sh
+  611  ansible-playbook installnginx-apk.yml 
+  612  vim installnginx-apk.yml 
+  613  docker exec -it webserver1 sh
+  614  vim installnginx-apk.yml 
+  615  ansible-playbook installnginx-apk.yml 
+  616  vim installphp-modules.yml 
+  617  vim installphp.yml 
+  618  ansible-playbook installphp.yml 
+  619  vim installphp.yml 
+  620  ansible-playbook installphp.yml 
+  621  docker ps
+  622  vim installphp.yml 
+  623  docker rm -f webserver1
+  624  docker run  --name webserver1 -d --hostname webserver1 -p 2001:22 -p 8001:80 alpine/php
+  625  ansible-playbook installphp.yml 
+  626  ansible-playbook installphp-modules.yml 
+  627  ansible-playbook installnginx-apk.yml 
+  628  vim  installnginx-apk.yml 
+  629  ansible-playbook installnginx-apk.yml 
+  630  history | grep curl
+  631  curl http://172.17.0.2/index.php
+  632  curl http://172.17.0.2/
+  633  docker inspect webserver1
+  634  vim  installnginx-apk.yml 
+  635  ansible-playbook installnginx-apk.yml 
+  636  vim nginx.conf 
+  637  docker exec -it webserver1 sh
+  638  vim default.conf 
+  639  curl http://172.17.0.2:9000
+  640  docker exec -it webserver1 sh
+  641  curl http://172.17.0.2:9000
+  642  curl http://172.17.0.2
+  643  docker rm -f webserver1
+  644  docker run  --name webserver1 -d --hostname webserver1 -p 2001:22 -p 8001:80 alpine/php
+  645  vim default.conf 
+  646  vim nginx.conf 
+  647  ansible-playbook installnginx-apk.yml 
+  648  vim nginx.conf 
+  649  ls
+  650  ansible-playbook installnginx-apk.yml 
+  651  vim nginx.conf 
+  652  ansible-playbook installnginx-apk.yml 
+  653  vim installnginx-apk.yml 
+  654  ansible-playbook installnginx-apk.yml 
+  655  curl http://172.17.0.2
+  656  ls
+  657  history | grep docker cp
+  658  history | grep docker
+  659  docker cp index.php webserver1:/usr/share/nginx/html/index.php
+  660  curl http://172.17.0.2/index.php
+  661  docker logs webserver1
+  662  docker logs
+  663  docker logs -f
+  664  vim nginx.conf 
+  665  vim default.conf 
+  666  ansible-playbook installphp.yml 
+  667  curl http://172.17.0.2/index.php
+  668  curl http://172.17.0.2/
+  669  docker cp index.php webserver1:/usr/share/nginx/html/index.php
+  670  curl http://172.17.0.2/index.php
+  671  curl http://172.17.0.2/index.html
+  672  vim default.conf 
+  673  curl http://172.17.0.2:9000
+  674  docker exec -it webserver1 sh
+  675  curl http://172.17.0.2/index.html
+  676  curl http://172.17.0.2/index.php
+  677  curl http://localhost:8001/index.php
+  678  curl http://localhost:8001/
+  679  docker exec -it webserver1 sh
+  680  curl http://localhost:8001/index.php
+  681  vim default.conf 
+  682  ansible-playbook installnginx-apk.yml 
+  683  docker exec -it webserver1 sh
+  684  curl http://localhost:8001/index.php
+  685  vim default.conf 
+  686  ansible-playbook installnginx-apk.yml 
+  687  docker exec -it webserver1 sh
+  688  vim default.conf 
+  689  ansible-playbook installnginx-apk.yml 
+  690  docker exec -it webserver1 sh
+  691  vim installnginx-apk.yml 
+  692  docker exec -it webserver1 sh
+  693  curl http://localhost:8001/index.php
+  694  curl http://localhost:8001/index2.php
+  695  curl http://localhost:8001/index.php
+  696  docker exec -it webserver1 sh
+  697  docker logs
+  698  docker logs webserver1
+  699  docker exec -it webserver1 sh
+  700  curl http://localhost:8001/index.php
+  701  curl http://localhost:8001/
+  702  docker exec -it webserver1 sh
+  703  vim default.conf 
+  704  ansible-playbook installnginx-apk.yml 
+  705  docker exec -it webserver1 sh
+  706  curl http://localhost:8001/index.php
+  707  docker exec -it webserver1 sh
+  708  vim installnginx-apk.yml 
+  709  ansible-playbook installnginx-apk.yml 
+  710  cd ..
+  711  ls
+  712  cd ..
+  713  ls
+  714  git checkout git@github.com:splogamurugan/tictactoe.git
+  715  git clone git@github.com:splogamurugan/tictactoe.git
+  716  ls
+  717  cd tictactoe/
+  718  ls
+  719  docker cp -R * webserver1:/usr/share/nginx/html/
+  720  docker cp * webserver1:/usr/share/nginx/html/
+  721  docker cp ./* webserver1:/usr/share/nginx/html/
+  722  docker cp * webserver1:/usr/share/nginx/html/
+  723  docker cp ./ webserver1:/usr/share/nginx/html/
+  724  curl http://localhost:8001/public/
+  725  cd ..
+  726  ls
+  727  cd devOPS/
+  728  ls
+  729  cd playbooks/
+  730  ls
+  731  vim default.conf 
+  732  ansible-playbook installnginx-apk.yml 
+  733  clear
+  734  ls
+  735  clear
+  736  ls
+  737  vim create-containers.yml
+  738  vim create-containers.yml 
+  739  vim installnginx-apk.yml 
+  740  vim create-containers.yml 
+  741  ansible-playbook create-containers.yml 
+  742  pip install docker-py
+  743  yum install pip
+  744  sudo yum install epel-release
+  745  sudo yum install python-pip
+  746  pip install docker-py
+  747  ansible-playbook create-containers.yml 
+  748  docker ps
+  749  docker rm -f webserver1
+  750  ansible-playbook create-containers.yml 
+  751  docker ps
+  752  clear
+  753  ls
+  754  curl http://localhost:8001/public/
+  755  curl http://localhost:8001
+  756  ansible-playbook installphp.yml 
+  757  ansible-playbook installnginx-apk.yml 
+  758  curl http://localhost:8001/public/
+  759  curl http://localhost:8001
+  760  ansible-playbook installnginx-apk.yml 
+  761  vim installnginx-apk.yml 
+  762  ansible-playbook installnginx-apk.yml 
+  763  docker exec -it webserver1 sh
+  764  curl http://localhost:8001/public/
+  765  clear
+  766  ls
+  767  curl http://localhost:8001/index.php
+  768  curl http://localhost:8001/
+  769  curl http://localhost:8001
+  770  docker exec -it webserver1 sh
+  771  curl http://localhost:8001
+  772  curl http://localhost:8001/public
+  773  clear
+  774  ansible-playbook create-containers.yml 
+  775  curl http://localhost:8001/public
+  776  ls
+  777  rm *.retry
+  778  clear
+  779  ls
+  780  tree
+  781  mv installnginx-apk.yml installnginx.yml
+  782  clear
+  783  ls
+  784  cd group_vars/
+  785  ls
+  786  cd ..
+  787  ls
+  788  cd host
+  789  ls
+  790  cd ..
+  791  ls
+  792  ls images/
+  793  cd playbooks/
+  794  cd ..
+  795  ls
+  796  git status
+  797  curl www.google.com
+  798  clear
+  799  ls
+  800  ip addr show
+  801  clear
+  802  ls
+  803  git clone git@github.com:slimphp/Slim-Skeleton.git cicdpipeline
+  804  clear
+  805  ls
+  806  cd devOPS/
+  807  ls
+  808  git status
+  809  git add playbooks/*
+  810  git status
+  811  history >> command2

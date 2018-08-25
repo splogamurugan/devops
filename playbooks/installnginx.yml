@@ -1,0 +1,44 @@
+- name: Install Nginx using apk
+  hosts: all
+  
+  vars:
+    - greeting_msg: DevOps!
+    - provisioner_tool: Docker
+    - automation_tool: Ansible
+
+  tasks: 
+    - name: install Nginx with default version
+      apk: upgrade=yes state=present
+
+    - name: install Nginx with default version
+      shell: "apk add --update nginx openrc && rm -rf /var/cache/apk/*"
+
+    - name: remove cache apk
+      shell: rm -rf /var/cache/apk/*
+    
+    - name: mkdir client-body
+      file: path=/tmp/nginx/client-body state=directory mode=0755 
+
+    - name: mkdir /etc/nginx
+      file: path=/etc/nginx state=directory mode=0755
+
+    - name: mkdir /etc/nginx
+      file: path=/etc/nginx/conf.d/ state=directory mode=0755
+    
+    - name: copy /etc/nginx/conf.d/default.conf
+      copy: src=default.conf dest=/etc/nginx/conf.d/default.conf
+
+    - name: mkdir /usr/share/nginx
+      file: path=/usr/share/nginx state=directory mode=0755
+
+    - name: mkdir /usr/share/nginx/html
+      file: path=/usr/share/nginx/html state=directory mode=0755
+    
+    - name: Deploy web page in nginx web server
+      template: src=index.html.j2 dest=/usr/share/nginx/html/index.html
+
+    #- name: set INIT status
+    #  service: name=nginx enabled=yes
+
+    - name: start the Nginx service, if necessary
+      shell: nginx -s stop -g 'pid /tmp/nginx.pid;' && nginx -g 'pid /tmp/nginx.pid;'

@@ -1,0 +1,12 @@
+- name: Create containers
+  hosts: localhost
+  tasks:
+    - name: Re-create the webserver container
+      docker_container:
+        name: webserver1
+        image: alpine/php
+        state: started
+        recreate: yes
+        ports:
+          - "8001:80"
+          - "2001:22"

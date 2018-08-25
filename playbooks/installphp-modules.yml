@@ -1,0 +1,16 @@
+- name: Install PHP modules
+  hosts: all
+  vars:
+    - greeting_msg: DevOps!
+    - provisioner_tool: Docker
+    - automation_tool: Ansible
+    - modules:
+        - php7-gd
+        - php7-mysqli
+        - php7-zlib
+        - php7-curl
+  tasks:
+    - name: Install PHP modules
+      apk: name="{{item}}" update_cache=yes 
+      with_list: "{{modules}}"
+       
